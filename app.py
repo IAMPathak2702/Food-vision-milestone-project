@@ -53,8 +53,6 @@ model = load_model()
 
 def preprocess_image(image):
     try:
-        # Assuming your model expects a specific input shape, resize if needed
-        # (replace with your actual resizing logic based on model requirements)
         img = image.resize((224, 224))  # Example resize to 224x224
         # Convert to a NumPy array and expand dims for model input
         img_array = tf.expand_dims(tf.convert_to_tensor(img), axis=0)
@@ -87,8 +85,6 @@ if uploaded_file is not None:
         else:
             st.error("This image may not seems to belong to above mentioned class. Please reload the relevant file")
                 
-         # Replace with your actual class names
-        
         st.image(uploaded_file, caption='Uploaded Image', use_column_width=True)
         
         
