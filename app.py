@@ -93,4 +93,4 @@ if uploaded_file is not None:
         
         
 st.divider()
-st.write("                                         ©️Ved")
+
